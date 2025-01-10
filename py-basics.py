@@ -1,0 +1,1 @@
+print("Jibon ta bedona")
