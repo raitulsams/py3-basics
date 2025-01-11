@@ -1,1 +1,0 @@
-print("Jibon ta bedona")
