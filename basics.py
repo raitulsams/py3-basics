@@ -1,9 +1,6 @@
 print("Jibon ta bedona")
 
 
-from operator import truediv
-
-
 def strings_():
     c = "Hello, World"
     d = c.split(",")
