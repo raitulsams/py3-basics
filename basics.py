@@ -18,7 +18,7 @@ def strings_():
     txt3 = txt2.center(200, "3")
     print(txt3)
 
-    x = 2go
+    x = 2
     y = 5
 
     print(x ** y)  # same as 2*2*2*2*2
