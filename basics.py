@@ -1,5 +1,4 @@
-print("Jibon ta bedona")
-
+# print("Jibon ta bedona")
 
 def strings_():
     c = "Hello, World"
@@ -47,4 +46,25 @@ def boolean():
     print(z)
     print(y)
 
-boolean()
+def listType():
+    a = ["jibon" , "banana", "bedona"]
+    print(a)
+
+def tupleType():
+    a = ("jibon" , "banana", "bedona")
+    print(a)
+
+def rangeType():
+    a = range(10)
+    b = range(3, 18, 2)
+    print(a)
+    print(b)
+    for i in range(2, 8, 2):
+        print("Inside loop: ", i)
+
+    for j in range(2, 5):
+        print("Pg loop: ", j)
+
+    for k in range(2, 5, 1):
+        print("Ng loop: ", k)
+rangeType()
