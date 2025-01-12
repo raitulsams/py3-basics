@@ -88,4 +88,13 @@ def sysModule():
         print(sys.modules)
         print(sys.path)
 
-sysModule()
+
+def listDepth():
+    normalList = [1, 2, 3]
+    rangeInList = list(range(1, 100, 2))
+    listInArray = [i for i in range(4, 8, 1)]
+    print(normalList)
+    print(rangeInList)
+    print(listInArray)
+
+listDepth()
