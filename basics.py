@@ -84,5 +84,8 @@ def rangeType():
 def sysModule():
         import sys
         print(sys.version)
+        print("Platform:", sys.platform)
+        print(sys.modules)
+        print(sys.path)
 
 sysModule()
