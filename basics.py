@@ -54,7 +54,7 @@ def tupleType():
     a = ("jibon" , "banana", "bedona")
     print(a)
 
-def rangeType():
+def rangeList():
     a = range(10)
     b = range(3, 18, 2)
     print(a)
@@ -80,6 +80,39 @@ def rangeType():
     s = list(("jibon" , "banana", "bedona"))
     print("Memory usage of listlist((\"jibon\" , \"banana\", \"bedona\"))", sys.getsizeof(s))
 
+    thislist = ["appel", "kola", "cherifol"]
+    thislist.append("komola")
+    thislist.insert(2, "komolalebu")
+    print ("After inserting: ",thislist)
+
+    listOne = list(("ami", "tumi", "ar", "danish"))
+    listTwo = ["ebong", "kolagach"]
+    # myList = listOne.extend(listTwo)
+    listOne.extend(listTwo)
+    print(listOne)
+    if "komolebu" in thislist:
+        print("Yes, 'komolalebu' is in the fruits list")
+
+    listMix = list(("mera", "naam", "hain", "sikandar"))
+    tupleMix = tuple(("lichu", "tokfol"))
+    listMix.extend(tupleMix)
+    print("After mising list and tuple datatype: ",type(listMix))
+    print("Before clearing: ",listMix)
+    listMix.clear()
+    print("After clearing: ",listMix)
+    print("After clearing the length: ",len(listMix))
+
+# loop and if condition list
+
+
+    fol = ["komol", "aam", "jambura", "goya", "ataa"]
+
+    folerList = [x for x in fol if "a" in x]
+
+    print("Foler namer moddhe a khujtesi: ",folerList)
+    print("Foler type: ",type(folerList))
+
+rangeList()
 
 def sysModule():
         import sys
@@ -89,6 +122,10 @@ def sysModule():
         print(sys.path)
 
 
+# List: Mutable (can be modified after creation).
+
+# You can change the values of a list, add new elements, or remove elements after it has been created.
+
 def listDepth():
     normalList = [1, 2, 3]
     rangeInList = list(range(1, 100, 2))
@@ -97,4 +134,8 @@ def listDepth():
     print(rangeInList)
     print(listInArray)
 
-listDepth()
+def exploringTuple():
+    tapatap = (12, 45, 67)
+    print(tapatap)
+
+exploringTuple()
