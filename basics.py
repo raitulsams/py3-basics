@@ -65,6 +65,6 @@ def rangeType():
     for j in range(2, 5):
         print("Pg loop: ", j)
 
-    for k in range(2, 5, 1):
+    for k in range(12, 5, -2):
         print("Ng loop: ", k)
 rangeType()
