@@ -67,4 +67,22 @@ def rangeType():
 
     for k in range(12, 5, -2):
         print("Ng loop: ", k)
-rangeType()
+        # memory usuage of range and list
+    import sys
+
+    r = range(1, 1000000)
+    print("Memory usuage of range(1, 1000000): ", sys.getsizeof(r))
+
+    u = list(range(1, 1000000))
+    print(list(range(1, 100)))
+    print("list(range(1, 1000000)): ", sys.getsizeof(u))
+
+    s = list(("jibon" , "banana", "bedona"))
+    print("Memory usage of listlist((\"jibon\" , \"banana\", \"bedona\"))", sys.getsizeof(s))
+
+
+def sysModule():
+        import sys
+        print(sys.version)
+
+sysModule()
