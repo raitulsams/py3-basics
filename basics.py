@@ -177,11 +177,6 @@ def loopThruIndex():
     # while i < len(thisList):
     #     print(i, thisList[i])
     #     i= i+1
-    [print(x) for x in thisList]
-    [print(x) for x in range(len(thisList))]
-    [print(thisList[x]) for x in range(len(thisList))]
-    [print([thisList[x]]) for x in range(len(thisList))]
-    [print(type([thisList[x]])) for x in range(len(thisList))]
 
 def fnRange():
     x = range(10)
@@ -191,11 +186,24 @@ def fnRange():
 
 
 def lstComprehension():
-    thisList = [1, 2, 3, 4.5, 5.32, "Sams", "Maahin"]
-    [print(x) for x in thisList]
-    [print(x) for x in range(len(thisList))]
-    [print(thisList[x]) for x in range(len(thisList))]
-    [print([thisList[x]]) for x in range(len(thisList))]
-    [print(type([thisList[x]])) for x in range(len(thisList))]
+    thislist = [1, 2, 3, 4.5, 5.32, "Sams", "Maahin"]
+
+    # printing list values
+    # [print(x) for x in thislist]
+
+    # printing list index
+    # [print(x) for x in range(len(thislist))]
+
+    # printing list values using range() and len()
+    # [print(thislist[x]) for x in range(len(thislist))]
+
+    # printing list values as list
+    [print([thislist[x]]) for x in range(len(thislist))]
+    [print(f'Type of value: {thislist[x]} is {type(thislist[x])}') for x in range(len(thislist)) ]
+    [print(f'Value of index: {x} is {thislist[x]}') for x in range(len(thislist)) ]
+    [print(f'Type of value: {thislist[x]}' ,"is ", type(thislist[x]), "Value using '[' ']': ", [thislist[x]]) for x in range(len(thislist))]
+
+    # Checking each values types
+    # [print(type([thislist[x]])) for x in range(len(thislist))]
 
 lstComprehension()
