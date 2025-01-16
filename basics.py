@@ -104,7 +104,7 @@ def rangeList():
 
 # loop and if condition list
 
-
+def loopForIn():
     fol = ["komol", "aam", "jambura", "goya", "ataa"]
 
     folerList = [x for x in fol if "a" in x]
@@ -112,7 +112,7 @@ def rangeList():
     print("Foler namer moddhe a khujtesi: ",folerList)
     print("Foler type: ",type(folerList))
 
-rangeList()
+# rangeList()
 
 def sysModule():
         import sys
@@ -138,4 +138,43 @@ def exploringTuple():
     tapatap = (12, 45, 67)
     print(tapatap)
 
-exploringTuple()
+# check if item exists:
+# String is case sensitive
+def ifExists():
+    myList = ["Sams", "Mahin","Chisty", "Imran", 100.34, 600]
+    if "Sams" in myList:
+        print("Sams Found!")
+    elif 100.34 in myList:
+        print("100.34 Found")
+    else:
+        print("Not found!")
+
+
+
+def lstAppend():
+    thisList = [1, 2, 3]
+    thisList.append(4)
+    print(thisList)
+
+def lstInsert():
+    thislist = [1, 2, 3, "Sams", "Maahin"]
+    thislist.insert(1, "Start")
+    print(thislist)
+
+def loopLst():
+    thisLst = [1,None, ["Nested", "Inside",["Nested2.0", "Nested2.1"],  "lists"], range(2),  2.4, 3, True, "455", "Kola", "Kodu"]
+    for i in thisLst:
+        print(i, type(i))
+
+
+def loopThruIndex():
+    thisList = [1, 2, 3,4.5, 5.32, "Sams", "Maahin"]
+    i =0
+    # for i in range(len(thisList)):
+    #     print(i, thisList[i])
+
+    while i < len(thisList):
+        print(i, thisList[i])
+        i= i+1
+
+loopThruIndex()
