@@ -168,8 +168,9 @@ def loopLst():
 
 
 def loopThruIndex():
-    thisList = [1, 2, 3,4.5, 5.32, "Sams", "Maahin"]
+    thisList = [1, 2, 3, 4.5, 5.32, "Sams", "Maahin"]
     i =0
+    print(len(thisList))
     # for i in range(len(thisList)):
     #     print(i, thisList[i])
 
@@ -177,4 +178,10 @@ def loopThruIndex():
         print(i, thisList[i])
         i= i+1
 
-loopThruIndex()
+def fnRange():
+    x = range(10)
+    print(type(x))
+    print(len(x))
+    print(x)
+
+fnRange()
