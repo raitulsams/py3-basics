@@ -174,9 +174,14 @@ def loopThruIndex():
     # for i in range(len(thisList)):
     #     print(i, thisList[i])
 
-    while i < len(thisList):
-        print(i, thisList[i])
-        i= i+1
+    # while i < len(thisList):
+    #     print(i, thisList[i])
+    #     i= i+1
+    [print(x) for x in thisList]
+    [print(x) for x in range(len(thisList))]
+    [print(thisList[x]) for x in range(len(thisList))]
+    [print([thisList[x]]) for x in range(len(thisList))]
+    [print(type([thisList[x]])) for x in range(len(thisList))]
 
 def fnRange():
     x = range(10)
@@ -184,4 +189,13 @@ def fnRange():
     print(len(x))
     print(x)
 
-fnRange()
+
+def lstComprehension():
+    thisList = [1, 2, 3, 4.5, 5.32, "Sams", "Maahin"]
+    [print(x) for x in thisList]
+    [print(x) for x in range(len(thisList))]
+    [print(thisList[x]) for x in range(len(thisList))]
+    [print([thisList[x]]) for x in range(len(thisList))]
+    [print(type([thisList[x]])) for x in range(len(thisList))]
+
+lstComprehension()
