@@ -1,4 +1,6 @@
 # print("Jibon ta bedona")
+from itertools import pairwise
+
 
 def strings_():
     c = "Hello, World"
@@ -107,11 +109,19 @@ def rangeList():
 def loopForIn():
     fol = ["komol", "aam", "jambura", "goya", "ataa"]
 
-    folerList = [x for x in fol if "a" in x]
+    folerList = (x for x in fol if "a" in x)
 
-    print("Foler namer moddhe a khujtesi: ",folerList)
+    print("Foler namer moddhe \"a\" khujtesi: ",folerList)
     print("Foler type: ",type(folerList))
 
+    # typical way
+    # folerList = []
+    # for fruit in fol:
+    #     if "a" in fruit:
+    #         folerList.append(fruit)
+
+
+loopForIn()
 # rangeList()
 
 def sysModule():
@@ -206,4 +216,123 @@ def lstComprehension():
     # Checking each values types
     # [print(type([thislist[x]])) for x in range(len(thislist))]
 
-lstComprehension()
+def listComprehension1():
+        thislist = [1, 2, 3, 4.5, 5.32, "Sams", "Maahin"]
+        newList = [x for x in thislist if x !=  "Sams"]
+        print(newList)
+
+def sorting():
+    thislist= [6, 9, 3]
+    print("Before Sorting: ", thislist)
+    thislist.sort()
+    print("After Sorting: ",thislist)
+
+def copy():
+    thislist = ["apple", "banana", "cherry"]
+    mylist = thislist
+    print(mylist)
+
+def appendList():
+    list1 = ["a", "b", "c"]
+    list2 = [1, 2, 3]
+
+    list1.extend(list2)
+    print(list1)
+
+def methods():
+    mylist=[1, 4, 6, "Banana", "2.32"]
+    # mylist.clear()
+    # print(mylist.count("Banana"))
+
+    fruits = ['apple', 'banana', 'cherry']
+
+    points = (1, 4, 5, 9)
+
+    fruits.extend(points)
+
+    print(fruits)
+    print(type(fruits))
+
+def tupling():
+    thistuple = ("apple", "banana", "cherry")
+    # print(thistuple)
+
+    y = ("orange",)
+    thistuple += y
+
+    print(thistuple)
+
+
+def unpacking():
+    fruits = ("apple", "banana", "cherry")
+
+    # (green, yellow, red) = fruits
+
+    # print(green)
+    # print(yellow)
+    # print(red)
+
+    fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+    print(fruits)
+    (green, yellow, *red) = fruits
+
+    print(green)
+    print(yellow)
+    print(red)
+
+
+def pySets():
+    thisset = {"apple", "banana", "cherry"}
+    print(thisset)
+
+
+def joinSets():
+    set1 = {"a", "b", "c"}
+    set2 = {1, 2, 3, 1}
+
+    set3 = set1.union(set2)
+    print(set3)
+
+def pyDict():
+    thisdict = {
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
+    }
+    x = thisdict["model"]
+    print(x)
+
+def dictKey():
+    thisdict = {
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
+    }
+    for x in thisdict:
+        print(x, thisdict[x])
+
+
+    # Return all values
+    for x in thisdict.values():
+        print(x)
+    # Return all Keys
+    for x in thisdict.keys():
+        print(x)
+
+        # Loop thru key value pair
+    for j, k in thisdict.items():
+        print("Key-value", j, k)
+
+def dictItems():
+    car = {
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 1964
+    }
+
+    x = car.items()
+
+    print(type(x))
+
+
+# dictItems()
