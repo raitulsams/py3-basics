@@ -1,0 +1,4 @@
+List is a collection which is ordered and changeable. Allows duplicate members. [1,2,3]
+Tuple is a collection which is ordered and unchangeable. Allows duplicate members. (1,2,3)
+Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members. {1,2,3}
+Dictionary is a collection which is ordered** and changeable. No duplicate members. {"a" : 1, "b": 2, "c" : 3}
