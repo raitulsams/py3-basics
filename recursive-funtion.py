@@ -31,4 +31,16 @@ def naturalsum(n):
     return naturalsum(n - 1) + n
 
 
-print(naturalsum(4))
+# print(naturalsum(10))
+
+
+# WFA print all elements in a list
+
+def print_list(lists, idx=0):
+    if len(lists) == idx:
+        return
+    print(lists[idx])
+    print_list(lists, idx + 1)
+
+
+print_list(["a", "b", "c"])
