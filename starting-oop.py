@@ -59,22 +59,34 @@ class Student:
 # Create methods for debit, credit & printing the balance.
 class Account:
     def __init__(self, balance, account_no):
-        self.balance = balance
-        self.account_no = account_no
+        self.balance = int(balance)
+        self.account_no = int(account_no)
 
     def debit(self, amount):
-        print("debited", amount)
-        self.balance -= amount
+        print("Debited:", amount)
+        self.balance -= int(amount)
 
     def credit(self, amount):
-        print("Credited: ", amount)
-        self.balance += amount
+        print("Credited:", amount)
+        self.balance += int(amount)
 
     def curr_balance(self):
         print("Current Balance is", self.balance)
 
 
-obj = Account(100, 1234)
-obj.debit(20)
-obj.credit(30)
-obj.curr_balance()
+def get_input():
+    account_no = input("Enter the account no:")
+    balance = input("Enter the balance:")
+    obj = Account(balance, account_no)
+    debit_or_credit = input("Enter 1 for debit or 2 for credit:")
+    if debit_or_credit == "1":
+        obj.debit(int(input("Enter the amount:")))
+        obj.curr_balance()
+    elif debit_or_credit == "2":
+        obj.credit(int(input("Enter the amount:")))
+        obj.curr_balance()
+    else:
+        print("Invalid input")
+
+
+get_input()
