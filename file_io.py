@@ -149,4 +149,45 @@ def find_and_replace():
         print("After replacing:\n", new_data)
 
 
-find_and_replace()
+# find_and_replace()
+
+
+def find_the_str(myStr):
+    with open("demo.txt", "r+") as f:
+        data = f.read()
+        if data.find(myStr) != -1:
+            print(f"Found you, \'{myStr}\'.")
+        else:
+            print("Not Found.")
+            print("Not Found.")
+
+
+# find_the_str("Python")
+
+
+def find_str_line(word):
+    line_no = 1
+    with open("demo.txt", "r+") as f:
+        for i in f:
+            if word in i:
+                print(f"Found the word \'{word}\' in line {line_no}")
+                return
+            else:
+                line_no += 1
+
+
+# find_str_line("Python")
+
+
+def find_even_numbers():
+    with open("demonumbers.txt", "r+") as f:
+        count = 0
+        data = f.read()
+        for i in data.split(","):
+            if int(i) % 2 == 0:
+                count += 1
+                print(i)
+    print(f"Total even numbers: {count}")
+
+
+find_even_numbers()
