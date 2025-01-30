@@ -23,8 +23,27 @@
 
 # Classes are based on data(attributes) and methods(function)
 
-#  Static Methods
-#  Static methods are methods that do not have the self parameter; works as class level
+# Decorator
+
+
+#  Static Method (@staticmethod),not access to  class or instance attributes
+#  Static methods are methods that do not have the self parameter; works as class level.
+#  When instances are created, static method does not create again and again for each instance instead it created only once in the class level.
+#  Many objects/instances can use this method but this method is created only one time
+#  Generally used for utility or showing something
+
+# Class method (@classmethod), (self as an arguments)
+# A class method is bound to the class & receive the class as an implicit first argument\
+
+# Instance method (self as an arguments)
+
+# Property method (property)
+# Used on any method inside the class to use the method as a property
+# Instant changes of class attribute value will reflect instantly
+
+# getter
+# setter
+
 
 # Abstraction
 # Hiding the implementation details of a class and only showing the essential features to the user
@@ -36,6 +55,99 @@
 # Wrapping data and functions into a single unit(object)
 # In Class, we have like constructor, static or non-static method and data attributes.
 # Encapsulation is normally binding all these and whenever an object created.
+
+# Inheritance
+# Single inheritance: One Base (Parent) class, one derived(Child) class
+# Multi-level Inheritance: One base class, multiple derived class. (One parent, multiple childz)
+# Multiple Inheritance: Multiple base class, single derived class
+# Super Method
+# super() method is used to access methods of the parent class
+
+# Polymorphism: Operator overloading
+
+
+class Order:
+    def __init__(self, item, price):
+        self.item = item
+        self.price = price
+
+    def __gt__(self, odr2):
+        return self.price < odr2.price
+
+
+odr1 = Order("Pizza", 100)
+odr2 = Order("Burger", 150)
+print(odr1 > odr2)
+
+
+class Student:
+    def __init__(self, phy, chem, maths):
+        self.phy = phy
+        self.chem = chem
+        self.maths = maths
+
+    @property
+    def calcPercentage(self):
+        return (self.phy + self.chem + self.maths) / 300 * 100
+
+
+student1 = Student(89, 90, 80)
+student1.phy = 100
+print(student1.calcPercentage)
+
+
+class Person:
+    name_in = "sams"
+
+    def __init__(self, name):
+        self.name = name
+
+    # instance method
+    def change_name(self, name):
+        self.__class__.name_in = name  # changing the class level attribute
+        Person.name_in = name  # same , changing the class level attribute
+
+    @classmethod
+    def change_name_using_class_method(cls, name):
+        cls.name_in = name
+
+
+# p1 = Person("Rahim")
+# p1.change_name_using_class_method("Rahim Karim")
+# print(p1.name_in)
+
+
+class Car:
+    color = "red"
+
+    @staticmethod
+    def start():
+        print("Car started")
+
+    @staticmethod
+    def stop():
+        print("Car stopped")
+
+
+class ToyotaCar(Car):
+    def __init__(self, name):
+        self.name = name
+
+    @staticmethod
+    def special_features(self):
+        print(f"{self.name} car has special features")
+
+
+class BMWCar(ToyotaCar):
+    def __init__(self, name):
+        self.name = name
+
+
+# car1 = ToyotaCar("Corolla")
+# car2 = BMWCar("BMW")
+# car1.special_features(car2)
+# print(car1.color)
+
 
 class Student:
     def __init__(self, name):
@@ -88,5 +200,4 @@ def get_input():
     else:
         print("Invalid input")
 
-
-get_input()
+# get_input()
